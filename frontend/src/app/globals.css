@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+:root {
+  color-scheme: light;
+  /* Couleurs principales du logo - améliorées */
+  --primary-blue: #0055a4;
+  --primary-red: #ef4135;
+  
+  /* Variantes de bleu - plus riches */
+  --blue-dark: #003d7a;
+  --blue-medium: #0066cc;
+  --blue-light: #e6f0ff;
+  --blue-pale: #f0f7ff;
+  --blue-accent: #0077e6;
+  
+  /* Variantes de rouge - plus riches */
+  --red-dark: #c9352b;
+  --red-medium: #ff4d4d;
+  --red-light: #ffe5e3;
+  --red-pale: #fff0ed;
+  --red-accent: #ff6b6b;
+  
+  /* Couleurs neutres - plus modernes */
+  --white: #ffffff;
+  --gray-50: #fafbfc;
+  --gray-100: #f5f6f7;
+  --gray-200: #e8eaed;
+  --gray-300: #d1d3d6;
+  --gray-400: #9aa0a6;
+  --gray-500: #5f6368;
+  --gray-600: #3c4043;
+  --gray-700: #2d2e30;
+  --gray-800: #1f2022;
+  --gray-900: #121212;
+  
+  /* Couleurs de texte - meilleur contraste */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  
+  /* Couleurs de fond et surface */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafbfc;
+  --bg-tertiary: #f5f6f7;
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e8eaed 100%);
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-hover: #f8f9fa;
+  
+  /* Bordures - plus subtiles */
+  --border-color: #e8eaed;
+  --border-color-hover: #d1d3d6;
+  --border-focus: #0055a4;
+  --border-light: #f0f2f5;
+  
+  /* Ombres - plus modernes et subtiles */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-blue: 0 4px 14px 0 rgba(0, 85, 164, 0.15);
+  --shadow-red: 0 4px 14px 0 rgba(239, 65, 53, 0.15);
+  
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, #0055a4 0%, #0077e6 100%);
+  --gradient-red: linear-gradient(135deg, #ef4135 0%, #ff6b6b 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(0, 85, 164, 0.05) 0%, rgba(239, 65, 53, 0.03) 100%);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-primary);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+}
+
+::selection {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

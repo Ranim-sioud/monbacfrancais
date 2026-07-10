@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum AgenceSource {
+  MANUAL
+  SCRAPED
+}
+
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum Classe {
+  PREMIERE
+  TERMINALE
+}
+
+enum PackType {
+  MENSUEL
+  ANNUEL
+}
+
+enum SubscriptionStatus {
+  PENDING
+  ACTIVE
+  CANCELLED
+}
+
+model User {
+  id           String      @id @default(uuid())
+  name         String
+  email        String      @unique
+  passwordHash String
+  role         Role        @default(USER)
+  country      String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  actualites   Actualite[]
+  refreshTokens RefreshToken[]
+}
+
+model Agence {
+  id             String       @id @default(uuid())
+  nom            String
+  type           String?
+  pays           String
+  ville          String?
+  adresse        String?
+  telephone      String?
+  email          String?
+  siteWeb        String?
+  facebook       String?
+  logoUrl        String?
+  description    String?      @db.Text
+  urlSource      String?
+  source         AgenceSource @default(MANUAL)
+  scrapeDate     DateTime?
+  verified       Boolean      @default(false)
+  relevanceScore Int          @default(0)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model Actualite {
+  id         String        @id @default(uuid())
+  titre      String
+  contenu    String        @db.LongText
+  resume     String?       @db.Text
+  sourceUrl  String?
+  categorie  String?
+  imageUrl   String?
+  publieLe   DateTime?
+  scrapeDate DateTime?
+  status     ArticleStatus @default(DRAFT)
+  authorId   String?
+  author     User?         @relation(fields: [authorId], references: [id])
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique @db.VarChar(500)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Inscription {
+  id            String             @id @default(uuid())
+  nom           String
+  email         String
+  pays          String
+  ville         String
+  classe        Classe
+  specialites   String             @db.Text
+  message       String?            @db.Text
+  packType      PackType
+  prixOriginal  Float
+  prixFinal     Float
+  reduction     Float              @default(20)
+  status        SubscriptionStatus @default(PENDING)
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+}
+

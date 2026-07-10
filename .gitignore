@@ -1,0 +1,33 @@
+# Node.js
+node_modules/
+
+# Next.js
+frontend/.next/
+
+# Logs
+*.log
+
+# Variables d'environnement
+.env
+.env.*
+!.env.example
+
+# Prisma
+prisma/dev.db
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# PM2
+.pm2/
+
+# Uploads (si les fichiers sont générés)
+uploads/
