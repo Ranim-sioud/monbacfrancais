@@ -35,7 +35,8 @@ export const siteUrl = "https://monbacfrancais.com";
 export const navigationItems: NavItem[] = [
   { href: "/", label: "Accueil" },
   { href: "/en-ligne", label: "En ligne" },
-  { href: "/tunisie", label: "Tunisie" },
+  { href: "/afrique", label: "Afrique" },
+  { href: "/europe", label: "Europe" },
   { href: "/autres-pays", label: "Autres pays" },
   { href: "/guide-bac-francais", label: "Guide du Bac Français" },
   { href: "/inscription-candidat-libre", label: "Inscription candidat libre" },
@@ -56,12 +57,23 @@ export const primaryTracks: Track[] = [
     ],
   },
   {
-    title: "Tunisie",
-    href: "/tunisie",
+    title: "Afrique",
+    href: "/afrique",
     description:
-      "Un espace dédié aux familles et élèves en Tunisie avec des repères pratiques sur les centres, les démarches et le calendrier.",
+      "Un espace dédié aux familles et élèves en Afrique avec des repères pratiques sur les centres, les démarches et le calendrier.",
     bullets: [
-      "Repères concrets pour les candidats installés en Tunisie",
+      "Repères concrets pour les candidats installés en Afrique",
+      "Aide sur la constitution du dossier d'inscription",
+      "Conseils logistiques pour anticiper les convocations",
+    ],
+  },
+  {
+    title: "Europe",
+    href: "/europe",
+    description:
+      "Un espace dédié aux familles et élèves en Europe avec des repères pratiques sur les centres, les démarches et le calendrier.",
+    bullets: [
+      "Repères concrets pour les candidats installés en Europe",
       "Aide sur la constitution du dossier d'inscription",
       "Conseils logistiques pour anticiper les convocations",
     ],
@@ -80,7 +92,7 @@ export const primaryTracks: Track[] = [
 ];
 
 export const keyFigures = [
-  { label: "Parcours de préparation", value: "3" },
+  { label: "Parcours de préparation", value: "4" },
   { label: "Étapes d'inscription clarifiées", value: "7" },
   { label: "Objectif principal", value: "100%" },
 ];
@@ -95,7 +107,7 @@ export const roadmapSteps = [
   {
     title: "Comprendre votre situation",
     description:
-      "Choisissez le parcours qui correspond à votre résidence : préparation en ligne, Tunisie ou autre pays.",
+      "Choisissez le parcours qui correspond à votre résidence : préparation en ligne, Afrique, Europe ou autre pays.",
   },
   {
     title: "Préparer le dossier",
@@ -211,6 +223,70 @@ export const pageContents: Record<string, PageContent> = {
       {
         title: "Comprendre l'environnement local",
         text: "La page Tunisie centralise les informations utiles pour les familles qui veulent identifier le bon interlocuteur, préparer l'inscription et anticiper les modalités d'examen.",
+      },
+      {
+        title: "Anticiper les délais",
+        text: "Les candidats libres ont besoin d'un calendrier très lisible. Cette rubrique met l'accent sur l'ordre des démarches afin de réduire le stress et les oublis.",
+      },
+      {
+        title: "Sécuriser son parcours",
+        text: "En clarifiant les pièces à réunir et les points de vigilance, la plateforme aide à sécuriser l'inscription puis la préparation académique.",
+      },
+    ],
+    faqs: commonFaqs,
+  },
+  afrique: {
+    eyebrow: "Parcours localisé",
+    title: "Passer le Bac Français en candidat libre depuis l'Afrique",
+    description:
+      "Une page dédiée aux élèves et familles en Afrique pour mieux comprendre les centres, les délais et les démarches à anticiper.",
+    highlights: [
+      "Repères administratifs localisés",
+      "Aide à la préparation du dossier",
+      "Vision claire des échéances",
+      "Conseils de logistique et d'organisation",
+    ],
+    stats: [
+      { label: "Zone", value: "Afrique" },
+      { label: "Focus", value: "Démarches" },
+      { label: "Objectif", value: "Clarté" },
+    ],
+    sections: [
+      {
+        title: "Comprendre l'environnement local",
+        text: "La page Afrique centralise les informations utiles pour les familles qui veulent identifier le bon interlocuteur, préparer l'inscription et anticiper les modalités d'examen.",
+      },
+      {
+        title: "Anticiper les délais",
+        text: "Les candidats libres ont besoin d'un calendrier très lisible. Cette rubrique met l'accent sur l'ordre des démarches afin de réduire le stress et les oublis.",
+      },
+      {
+        title: "Sécuriser son parcours",
+        text: "En clarifiant les pièces à réunir et les points de vigilance, la plateforme aide à sécuriser l'inscription puis la préparation académique.",
+      },
+    ],
+    faqs: commonFaqs,
+  },
+  europe: {
+    eyebrow: "Parcours localisé",
+    title: "Passer le Bac Français en candidat libre depuis l'Europe",
+    description:
+      "Une page dédiée aux élèves et familles en Europe pour mieux comprendre les centres, les délais et les démarches à anticiper.",
+    highlights: [
+      "Repères administratifs localisés",
+      "Aide à la préparation du dossier",
+      "Vision claire des échéances",
+      "Conseils de logistique et d'organisation",
+    ],
+    stats: [
+      { label: "Zone", value: "Europe" },
+      { label: "Focus", value: "Démarches" },
+      { label: "Objectif", value: "Clarté" },
+    ],
+    sections: [
+      {
+        title: "Comprendre l'environnement local",
+        text: "La page Europe centralise les informations utiles pour les familles qui veulent identifier le bon interlocuteur, préparer l'inscription et anticiper les modalités d'examen.",
       },
       {
         title: "Anticiper les délais",

@@ -8,24 +8,24 @@ import { TunisieMiniSlider } from "@/components/tunisie-mini-slider";
 import { pageContents } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: "Bac français Tunisie",
+  title: "Bac français Afrique",
   description:
-    "Bac français Tunisie : centres, accompagnement et inscription bac français candidat libre depuis la Tunisie.",
+    "Bac français Afrique : centres, accompagnement et inscription bac français candidat libre depuis l'Afrique.",
   keywords: [
-    "bac français tunisie",
+    "bac français afrique",
     "bac français candidat libre",
     "inscription bac français candidat libre",
     "préparation bac français en ligne",
   ],
   openGraph: {
-    title: "Bac français Tunisie",
+    title: "Bac français Afrique",
     description:
-      "Toutes les informations pour préparer et passer le bac français candidat libre depuis la Tunisie.",
-    url: "/tunisie",
+      "Toutes les informations pour préparer et passer le bac français candidat libre depuis l'Afrique.",
+    url: "/afrique",
     type: "article",
   },
   alternates: {
-    canonical: "/tunisie",
+    canonical: "/afrique",
   },
 };
 
@@ -61,6 +61,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
 
 async function getAgences(): Promise<Agence[]> {
   try {
+    // On récupère les agences de Tunisie comme partenaires principaux en Afrique
     const res = await fetch(`${API_BASE}/agences?pays=Tunisie`, {
       cache: "no-store",
     });
@@ -80,7 +81,7 @@ const getSlug = (name: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-export default async function TunisiePage() {
+export default async function AfriquePage() {
   const agences = await getAgences();
   const hasSmartech = agences.some(a => a.nom.toLowerCase().includes("smartech"));
 
@@ -111,7 +112,7 @@ export default async function TunisiePage() {
                     {a.nom}
                   </h2>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    Centre partenaire - {a.type || a.ville || "Tunisie"}
+                    Centre partenaire - {a.type || a.ville || a.pays}
                   </p>
                 </div>
               </div>
@@ -155,7 +156,7 @@ export default async function TunisiePage() {
 
   return (
     <>
-      <ContentPage content={pageContents.tunisie} insertAfterHero={ctaCentersSection} />
+      <ContentPage content={pageContents.afrique} insertAfterHero={ctaCentersSection} />
       <TunisieMiniSlider />
 
       {hasSmartech && (
@@ -257,7 +258,7 @@ export default async function TunisiePage() {
             <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.97),rgba(234,244,255,0.93))] p-8 shadow-[0_16px_44px_rgba(1, 48, 120,0.14)] sm:p-10">
               <div className="max-w-3xl space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
-                  Centre partenaire - {a.type || a.ville || "Tunisie"}
+                  Centre partenaire - {a.type || a.ville || a.pays}
                 </p>
                 <h2 className="text-4xl font-semibold tracking-tight text-[var(--text-primary)]">
                   {a.nom}

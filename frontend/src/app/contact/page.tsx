@@ -87,7 +87,7 @@ export default function ContactPage() {
 
       <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_44px_rgba(0,85,164,0.14)]">
+          <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_44px_rgba(1, 48, 120,0.14)]">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
               Formulaire de contact
             </p>
@@ -155,7 +155,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="rounded-md border border-[var(--primary-blue)] bg-[linear-gradient(135deg,var(--primary-blue),var(--blue-light))] px-6 py-4 text-sm font-semibold text-[var(--white)] shadow-[0_16px_40px_rgba(0,85,164,0.2)] transition hover:translate-y-[-1px] hover:brightness-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="rounded-md border border-[var(--primary-blue)] bg-[linear-gradient(135deg,var(--primary-blue),var(--blue-light))] px-6 py-4 text-sm font-semibold text-[var(--white)] shadow-[0_16px_40px_rgba(1, 48, 120,0.2)] transition hover:translate-y-[-1px] hover:brightness-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
               </button>

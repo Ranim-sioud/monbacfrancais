@@ -5,7 +5,7 @@ const srcDir = path.resolve(__dirname, '../../frontend/src');
 
 const replacements = [
   // Hex Colors
-  { search: /#00cfe8/gi, replace: '#ef4135' }, // --cyan-main -> --fr-red
+  { search: /#00cfe8/gi, replace: '#db1a0f' }, // --cyan-main -> --fr-red
   { search: /#b8f5ff/gi, replace: '#ffebeb' }, // --cyan-soft -> very light red
   { search: /#67e8f9/gi, replace: '#ff7a70' }, // Tailwind cyan-300 hex -> red-300 hex equivalent
   { search: /#ecfeff/gi, replace: '#ffebeb' }, // Tailwind cyan-50 hex -> red-50 hex equivalent
@@ -26,9 +26,9 @@ const replacements = [
   { search: /bg-cyan-300/g, replace: 'bg-red-300' },
   { search: /text-cyan-200/g, replace: 'text-red-200' },
   
-  // rgba values matching 0, 207, 232 (cyan) -> 239, 65, 53 (red)
-  { search: /0,\s*207,\s*232/g, replace: '239, 65, 53' },
-  { search: /0,207,232/g, replace: '239,65,53' }
+  // rgba values matching 0, 207, 232 (cyan) -> 219, 26, 15 (red)
+  { search: /0,\s*207,\s*232/g, replace: '219, 26, 15' },
+  { search: /0,207,232/g, replace: '219, 26, 15' }
 ];
 
 function processDirectory(dir) {

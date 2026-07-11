@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg-primary)] px-4">
       {/* ── Background decorations ── */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_top,rgba(0,85,164,0.16),transparent_58%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_top,rgba(1, 48, 120,0.16),transparent_58%)]" />
       <div className="pointer-events-none absolute right-[-4rem] top-20 h-80 w-80 rounded-md bg-red-300/20 blur-3xl" />
       <div className="pointer-events-none absolute bottom-20 left-[-4rem] h-72 w-72 rounded-md bg-red-300/20 blur-3xl" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-md bg-blue-200/10 blur-3xl" />
@@ -56,7 +56,7 @@ export default function AdminLoginPage() {
       <div className="relative z-10 w-full max-w-md">
         {/* Logo / Brand */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-lg bg-[linear-gradient(145deg,#ffffff,#d7ecff)] shadow-[0_14px_34px_rgba(0,85,164,0.16)]">
+          <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-lg bg-[linear-gradient(145deg,#ffffff,#d7ecff)] shadow-[0_14px_34px_rgba(1, 48, 120,0.16)]">
             <span className="text-2xl font-bold text-[var(--primary-blue)]">
               MBF
             </span>
@@ -70,7 +70,7 @@ export default function AdminLoginPage() {
         </div>
 
         {/* Card */}
-        <div className="rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.97),rgba(234,244,255,0.94))] p-8 shadow-[0_20px_50px_rgba(0,85,164,0.14)] sm:p-10">
+        <div className="rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.97),rgba(234,244,255,0.94))] p-8 shadow-[0_20px_50px_rgba(1, 48, 120,0.14)] sm:p-10">
           <form onSubmit={handleSubmit} className="grid gap-5">
             {/* Error alert */}
             {error && (
@@ -126,7 +126,7 @@ export default function AdminLoginPage() {
               id="admin-login-submit"
               type="submit"
               disabled={submitting}
-              className="mt-2 rounded-md border border-blue-200/65 bg-[linear-gradient(135deg,#0055a4,#0077cc)] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(0,85,164,0.3)] transition hover:translate-y-[-1px] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-2 rounded-md border border-blue-200/65 bg-[linear-gradient(135deg,#013078,#014aa8)] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(1, 48, 120,0.3)] transition hover:translate-y-[-1px] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting ? (
                 <span className="flex items-center justify-center gap-2">

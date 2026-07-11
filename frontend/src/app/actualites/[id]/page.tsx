@@ -68,7 +68,7 @@ export default async function ActualiteDetailPage({
 
   return (
     <>
-      <div className="bg-[linear-gradient(180deg,#0055a4,var(--text-primary))] py-16 text-white sm:py-24">
+      <div className="bg-[linear-gradient(180deg,#013078,var(--text-primary))] py-16 text-white sm:py-24">
         <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/actualites"
@@ -157,7 +157,7 @@ export default async function ActualiteDetailPage({
                   href={article.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 inline-flex rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] px-6 py-3 text-sm font-semibold text-white shadow-md hover:brightness-105 transition"
+                  className="shrink-0 inline-flex rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] px-6 py-3 text-sm font-semibold text-white shadow-md hover:brightness-105 transition"
                 >
                   Lire l&apos;article d&apos;origine ↗
                 </a>

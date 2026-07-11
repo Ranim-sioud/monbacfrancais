@@ -17,7 +17,7 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[30rem] bg-[radial-gradient(circle_at_top,rgba(0,85,164,0.13),transparent_58%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[30rem] bg-[radial-gradient(circle_at_top,rgba(1, 48, 120,0.13),transparent_58%)]" />
       <div className="pointer-events-none absolute right-0 top-36 h-72 w-72 rounded-md bg-red-300/25 blur-3xl" />
       <div className="pointer-events-none absolute left-0 top-[28rem] h-72 w-72 rounded-md bg-red-300/25 blur-3xl" />
       <TopBar />

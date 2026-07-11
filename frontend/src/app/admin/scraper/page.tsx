@@ -119,7 +119,7 @@ export default function AdminScraperPage() {
           <button
             onClick={scrapeAgences}
             disabled={loadingAgences}
-            className="mt-5 w-full rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
+            className="mt-5 w-full rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
           >
             {loadingAgences ? (
               <span className="flex items-center justify-center gap-2">
@@ -148,7 +148,7 @@ export default function AdminScraperPage() {
           <button
             onClick={scrapeActualites}
             disabled={loadingActualites}
-            className="mt-5 w-full rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
+            className="mt-5 w-full rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
           >
             {loadingActualites ? (
               <span className="flex items-center justify-center gap-2">

@@ -202,7 +202,7 @@ export default function AdminAgencesPage() {
         </div>
         <button
           onClick={openCreate}
-          className="rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(0,85,164,0.25)] transition hover:translate-y-[-1px] hover:brightness-110"
+          className="rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(1, 48, 120,0.25)] transition hover:translate-y-[-1px] hover:brightness-110"
         >
           + Nouvelle agence
         </button>
@@ -330,7 +330,7 @@ export default function AdminAgencesPage() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
+                  className="flex-1 rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] py-3 text-sm font-semibold text-white shadow-md transition hover:brightness-110 disabled:opacity-50"
                 >
                   {submitting
                     ? "Enregistrement…"

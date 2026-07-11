@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 export function WhatsAppFloat() {
-  const whatsappNumber = "21699295274"; // Remplacez par votre numéro WhatsApp
+  const whatsappNumber = "+33619684699"; // Remplacez par votre numéro WhatsApp
   const whatsappMessage = encodeURIComponent(
     "Bonjour, je souhaite avoir plus d'informations sur Mon Bac Français."
   );

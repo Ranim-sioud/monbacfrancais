@@ -119,7 +119,7 @@ export default function EnLignePage() {
           {programFeatures.map((feature) => (
             <article
               key={feature.title}
-              className="rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-6 sm:p-8 shadow-[0_12px_30px_rgba(0,85,164,0.12)]"
+              className="rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-6 sm:p-8 shadow-[0_12px_30px_rgba(1, 48, 120,0.12)]"
             >
               <h3 className="text-2xl font-semibold text-[var(--text-primary)]">{feature.title}</h3>
               <p className="mt-4 text-base leading-8 text-[var(--text-secondary)]">{feature.text}</p>
@@ -135,7 +135,7 @@ export default function EnLignePage() {
               key={module.title}
               className={`rounded-[2rem] border p-6 sm:p-8 ${
                 index === 1
-                  ? "border-[var(--primary-blue)]/40 bg-[linear-gradient(160deg,rgba(0,85,164,0.12),rgba(255,255,255,0.98))]"
+                  ? "border-[var(--primary-blue)]/40 bg-[linear-gradient(160deg,rgba(1, 48, 120,0.12),rgba(255,255,255,0.98))]"
                   : "border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))]"
               }`}
             >
@@ -150,7 +150,7 @@ export default function EnLignePage() {
       </section>
 
       <section className="mx-auto grid w-full max-w-7xl gap-8 px-4 pb-20 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-        <div className="min-w-0 rounded-[2.1rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-6 sm:p-8 md:p-10 shadow-[0_16px_40px_rgba(0,85,164,0.14)]">
+        <div className="min-w-0 rounded-[2.1rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-6 sm:p-8 md:p-10 shadow-[0_16px_40px_rgba(1, 48, 120,0.14)]">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
             Parcours élève
           </p>
@@ -173,7 +173,7 @@ export default function EnLignePage() {
           </div>
         </div>
 
-        <div className="min-w-0 rounded-[2.1rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.97),rgba(234,244,255,0.94))] p-6 sm:p-8 md:p-10 shadow-[0_16px_44px_rgba(0,85,164,0.14)]">
+        <div className="min-w-0 rounded-[2.1rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.97),rgba(234,244,255,0.94))] p-6 sm:p-8 md:p-10 shadow-[0_16px_44px_rgba(1, 48, 120,0.14)]">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
@@ -256,7 +256,7 @@ export default function EnLignePage() {
 
             <button
               type="button"
-              className="rounded-md border border-[var(--primary-blue)]/30 bg-[linear-gradient(135deg,var(--blue-pale),var(--primary-blue))] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(0,85,164,0.24)] transition hover:translate-y-[-1px] hover:brightness-105"
+              className="rounded-md border border-[var(--primary-blue)]/30 bg-[linear-gradient(135deg,var(--blue-pale),var(--primary-blue))] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(1, 48, 120,0.24)] transition hover:translate-y-[-1px] hover:brightness-105"
             >
               Envoyer ma demande
             </button>

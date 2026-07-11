@@ -127,7 +127,7 @@ export function HeroSwiper() {
 
   return (
     <section className="relative overflow-hidden border-b border-[var(--border-color)]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,85,164,0.08),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(0,85,164,0.05),_transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(1, 48, 120,0.08),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(1, 48, 120,0.05),_transparent_35%)]" />
       <div className="relative w-full">
         <Swiper
           modules={modules}

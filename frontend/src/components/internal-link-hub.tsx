@@ -10,8 +10,12 @@ const seoLinks = [
     label: "Inscription bac français candidat libre",
   },
   {
-    href: "/tunisie",
-    label: "Bac français Tunisie",
+    href: "/afrique",
+    label: "Bac français Afrique",
+  },
+  {
+    href: "/europe",
+    label: "Bac français Europe",
   },
   {
     href: "/autres-pays",

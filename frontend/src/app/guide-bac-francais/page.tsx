@@ -131,7 +131,7 @@ export default function GuideBacFrancaisPage() {
 
       <section className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-          <aside className="min-w-0 rounded-[2rem] border border-[var(--border-color)] bg-white p-7 shadow-[0_14px_36px_rgba(0,85,164,0.12)] grid gap-6 md:grid-cols-2 lg:block">
+          <aside className="min-w-0 rounded-[2rem] border border-[var(--border-color)] bg-white p-7 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)] grid gap-6 md:grid-cols-2 lg:block">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Sommaire
@@ -161,7 +161,7 @@ export default function GuideBacFrancaisPage() {
           <div className="space-y-10 min-w-0">
             <article
               id="bac-francais"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Explication du Bac Français
@@ -194,7 +194,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="voie-generale"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Voie générale
@@ -234,7 +234,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="premiere-terminale"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Fonctionnement Première / Terminale
@@ -274,7 +274,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="systeme-notes"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Système de notes
@@ -313,7 +313,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="candidat-libre"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Candidat libre vs scolarisé
@@ -386,7 +386,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="coefficients"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Coefficients (repères)
@@ -462,7 +462,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="mentions"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Barème des mentions
@@ -512,7 +512,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="rattrapage"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Le rattrapage (oral de contrôle)
@@ -560,7 +560,7 @@ export default function GuideBacFrancaisPage() {
 
             <article
               id="matieres"
-              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(0,85,164,0.12)]"
+              className="scroll-mt-28 rounded-[2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_14px_36px_rgba(1, 48, 120,0.12)]"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
                 Matières

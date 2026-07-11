@@ -6,22 +6,22 @@
 :root {
   color-scheme: light;
   /* Couleurs principales du logo - améliorées */
-  --primary-blue: #0055a4;
-  --primary-red: #ef4135;
+  --primary-blue: #013078;
+  --primary-red: #db1a0f;
   
   /* Variantes de bleu - plus riches */
-  --blue-dark: #003d7a;
-  --blue-medium: #0066cc;
+  --blue-dark: #001c4a;
+  --blue-medium: #013f99;
   --blue-light: #e6f0ff;
   --blue-pale: #f0f7ff;
-  --blue-accent: #0077e6;
+  --blue-accent: #015bd6;
   
   /* Variantes de rouge - plus riches */
-  --red-dark: #c9352b;
-  --red-medium: #ff4d4d;
+  --red-dark: #b8120a;
+  --red-medium: #f03024;
   --red-light: #ffe5e3;
   --red-pale: #fff0ed;
-  --red-accent: #ff6b6b;
+  --red-accent: #f25246;
   
   /* Couleurs neutres - plus modernes */
   --white: #ffffff;
@@ -54,7 +54,7 @@
   /* Bordures - plus subtiles */
   --border-color: #e8eaed;
   --border-color-hover: #d1d3d6;
-  --border-focus: #0055a4;
+  --border-focus: #013078;
   --border-light: #f0f2f5;
   
   /* Ombres - plus modernes et subtiles */
@@ -63,13 +63,13 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-blue: 0 4px 14px 0 rgba(0, 85, 164, 0.15);
-  --shadow-red: 0 4px 14px 0 rgba(239, 65, 53, 0.15);
+  --shadow-blue: 0 4px 14px 0 rgba(1, 48, 120, 0.15);
+  --shadow-red: 0 4px 14px 0 rgba(219, 26, 15, 0.15);
   
   /* Gradients */
-  --gradient-blue: linear-gradient(135deg, #0055a4 0%, #0077e6 100%);
-  --gradient-red: linear-gradient(135deg, #ef4135 0%, #ff6b6b 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(0, 85, 164, 0.05) 0%, rgba(239, 65, 53, 0.03) 100%);
+  --gradient-blue: linear-gradient(135deg, #013078 0%, #015bd6 100%);
+  --gradient-red: linear-gradient(135deg, #db1a0f 0%, #f25246 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(1, 48, 120, 0.05) 0%, rgba(219, 26, 15, 0.03) 100%);
   
   /* Transitions */
   --transition-fast: 150ms ease-in-out;

@@ -189,7 +189,7 @@ export default async function ActualitesPage() {
                 key={article.id}
                 className="flex flex-col overflow-hidden rounded-[2.2rem] border border-[var(--border-color)] bg-white shadow-sm transition hover:shadow-md"
               >
-                <div className="relative aspect-[16/10] w-full bg-[linear-gradient(135deg,#0055a4/10,#0077cc/5)]">
+                <div className="relative aspect-[16/10] w-full bg-[linear-gradient(135deg,#013078/10,#014aa8/5)]">
                   {article.imageUrl ? (
                     <img
                       src={article.imageUrl}
@@ -226,7 +226,7 @@ export default async function ActualitesPage() {
                   <div className="mt-6 pt-6 border-t border-slate-100 flex items-center justify-between">
                     <Link
                       href={`/actualites/${article.id}`}
-                      className="inline-flex rounded-md bg-[linear-gradient(135deg,#0055a4,#0077cc)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-sm hover:brightness-105 transition"
+                      className="inline-flex rounded-md bg-[linear-gradient(135deg,#013078,#014aa8)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-sm hover:brightness-105 transition"
                     >
                       Lire l&apos;actualité
                     </Link>
@@ -278,7 +278,7 @@ export default async function ActualitesPage() {
         id="calendrier"
         className="mx-auto w-full max-w-7xl px-4 pb-20 scroll-mt-28 sm:px-6 lg:px-8"
       >
-        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_44px_rgba(0,85,164,0.14)] sm:p-10">
+        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_44px_rgba(1, 48, 120,0.14)] sm:p-10">
           <div className="max-w-3xl space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
               Calendrier du bac
@@ -373,7 +373,7 @@ export default async function ActualitesPage() {
         id="specialites"
         className="mx-auto w-full max-w-7xl px-4 pb-20 scroll-mt-28 sm:px-6 lg:px-8"
       >
-        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_16px_40px_rgba(0,85,164,0.12)] sm:p-10">
+        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-white p-8 shadow-[0_16px_40px_rgba(1, 48, 120,0.12)] sm:p-10">
           <div className="max-w-3xl space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
               Évolution des spécialités
@@ -403,7 +403,7 @@ export default async function ActualitesPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_40px_rgba(0,85,164,0.12)] sm:p-10">
+        <div className="rounded-[2.2rem] border border-[var(--border-color)] bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(234,244,255,0.92))] p-8 shadow-[0_16px_40px_rgba(1, 48, 120,0.12)] sm:p-10">
           <div className="max-w-3xl space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary-blue)]">
               Source officielle Éducation nationale

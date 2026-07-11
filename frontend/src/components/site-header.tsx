@@ -22,14 +22,14 @@ export function SiteHeader() {
               <Image
                 src="/img/logo_MBF.png"
                 alt="Logo Mon Bac Français"
-                width={220}
-                height={220}
-                className="h-16 w-16 object-contain sm:h-20 sm:w-20"
+                width={300}
+                height={300}
+                className="h-20 w-20 object-contain sm:h-26 sm:w-26"
                 onError={() => setLogoFailed(true)}
                 priority
               />
             ) : (
-              <span className="inline-flex h-16 w-16 items-center justify-center rounded-lg border border-[var(--border-color)] bg-[var(--white)] text-sm font-bold text-[var(--primary-blue)] shadow-sm">
+              <span className="inline-flex h-20 w-20 items-center justify-center rounded-lg border border-[var(--border-color)] bg-[var(--white)] text-sm font-bold text-[var(--primary-blue)] shadow-sm sm:h-26 sm:w-26">
                 MBF
               </span>
             )}
