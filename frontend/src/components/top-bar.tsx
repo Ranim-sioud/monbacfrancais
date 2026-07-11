@@ -24,7 +24,7 @@ export function TopBar() {
           {/* Social Icons */}
           <div className="flex items-center gap-3">
             <a
-              href="https://facebook.com/monbacfrancais"
+              href="https://www.facebook.com/profile.php?id=61591231507628"
               target="_blank"
               rel="noreferrer"
               className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--gray-100)] text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition"
