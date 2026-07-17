@@ -3,50 +3,50 @@ import { navigationItems } from "@/data/site-content";
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-[var(--border-color)] bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(233,242,255,0.95))] backdrop-blur-md">
-      {/* Ligne décorative dégradée tricolore (Subtile & Moderne) */}
+    <footer className="relative border-t border-gray-900 bg-[var(--blue-dark)] text-gray-300">
+      {/* Ligne décorative dégradée tricolore */}
       <div className="h-[3px] w-full bg-gradient-to-r from-[var(--primary-blue)] via-[var(--primary-red)] to-[var(--primary-blue)] opacity-90" />
       
       {/* Effet d'éclairage radial en arrière-plan */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 " />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(219,26,15,0.06),transparent_70%)]" />
       
-      <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 relative z-10">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           
-          {/* 1. Brand Column (Premium & International) */}
+          {/* 1. Brand Column */}
           <div className="space-y-5">
             <div className="flex items-center gap-4">
-              <span className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[linear-gradient(145deg,#ffffff,#d7ecff)] text-base font-bold text-[var(--primary-blue)] shadow-md">
+              <span className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-base font-bold text-white shadow-md">
                 <span className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,207,232,0.22),transparent_58%)]" />
                 <span className="relative tracking-wider">MBF</span>
               </span>
               <div>
-                <p className="font-bold text-lg tracking-tight text-[var(--text-primary)]">Mon Bac Français</p>
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--primary-blue)]">monbacfrancais.com</p>
+                <p className="font-bold text-lg tracking-tight text-white">Mon Bac Français</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--primary-red)]">monbacfrancais.com</p>
               </div>
             </div>
             
-            <p className="text-sm leading-7 text-[var(--text-secondary)]">
+            <p className="text-sm leading-relaxed text-gray-300">
               La plateforme dédiée au Bac Français en candidat libre depuis l'étranger. 
               Préparez votre examen avec clarté, méthode et confiance.
             </p>
 
-            {/* Badges de positionnement haut de gamme */}
+            {/* Badges */}
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="rounded-full border border-blue-100 bg-blue-50/60 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-[var(--primary-blue)]">
+              <span className="rounded-full border border-blue-900 bg-blue-950/40 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-blue-300">
                 Luxe académique
               </span>
-              <span className="rounded-full border border-red-100 bg-red-50/60 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-red-600">
+              <span className="rounded-full border border-red-900 bg-red-950/40 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-red-300">
                 Candidat libre
               </span>
             </div>
           </div>
 
-          {/* 2. Navigation Column (Liens Dynamiques) */}
+          {/* 2. Navigation Column */}
           <div>
             <div className="mb-5 flex items-center gap-2">
               <div className="h-5 w-1 rounded-full bg-[var(--primary-blue)]" />
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--text-primary)]">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
                 Navigation
               </h3>
             </div>
@@ -55,9 +55,9 @@ export function SiteFooter() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-2 text-sm text-[var(--text-secondary)] transition-all duration-200 hover:text-[var(--primary-blue)] hover:translate-x-1"
+                    className="group flex items-center gap-2 text-sm text-gray-300 transition-all duration-200 hover:text-[var(--primary-red)] hover:translate-x-1"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-200 group-hover:w-3 group-hover:bg-[var(--primary-blue)]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-gray-600 transition-all duration-200 group-hover:w-3 group-hover:bg-[var(--primary-red)]" />
                     {item.label}
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ export function SiteFooter() {
           <div>
             <div className="mb-5 flex items-center gap-2">
               <div className="h-5 w-1 rounded-full bg-[var(--primary-red)]" />
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--text-primary)]">
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
                 Services
               </h3>
             </div>
@@ -83,9 +83,9 @@ export function SiteFooter() {
                 <li key={service.href}>
                   <Link 
                     href={service.href} 
-                    className="group flex items-center gap-2 text-sm text-[var(--text-secondary)] transition-all duration-200 hover:text-[var(--primary-blue)] hover:translate-x-1"
+                    className="group flex items-center gap-2 text-sm text-gray-300 transition-all duration-200 hover:text-[var(--primary-red)] hover:translate-x-1"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-200 group-hover:w-3 group-hover:bg-[var(--primary-red)]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-gray-600 transition-all duration-200 group-hover:w-3 group-hover:bg-[var(--primary-red)]" />
                     {service.label}
                   </Link>
                 </li>
@@ -93,48 +93,48 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* 4. Contact Column (Bulle d'information épurée) */}
-          <div className="rounded-2xl border border-[var(--border-color)] bg-white/60 p-5 shadow-sm backdrop-blur-sm">
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary-blue)] mb-4">
+          {/* 4. Contact Column */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg backdrop-blur-sm">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--primary-red)] mb-4">
               Support Premium
             </h3>
             <ul className="space-y-3.5">
-              <li className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-base">📧</span>
+              <li className="flex items-center gap-3 text-sm text-gray-300">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-base">📧</span>
                 <div className="overflow-hidden">
-                  <p className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-medium">Email</p>
-                  <a href="mailto:contact@monbacfrancais.com" className="text-xs font-medium text-[var(--text-primary)] hover:text-[var(--primary-blue)] transition truncate block">
+                  <p className="text-[11px] uppercase tracking-wider text-gray-400 font-medium">Email</p>
+                  <a href="mailto:contact@monbacfrancais.com" className="text-xs font-medium text-white hover:text-[var(--primary-red)] transition truncate block">
                     contact@monbacfrancais.com
                   </a>
                 </div>
               </li>
-              <li className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-50 text-base">📱</span>
+              <li className="flex items-center gap-3 text-sm text-gray-300">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-base">📱</span>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-medium">WhatsApp</p>
-                  <a href="https://wa.me/21699295274" className="text-xs font-medium text-[var(--text-primary)] hover:text-green-600 transition block">
+                  <p className="text-[11px] uppercase tracking-wider text-gray-400 font-medium">WhatsApp</p>
+                  <a href="https://wa.me/21699295274" className="text-xs font-medium text-white hover:text-green-400 transition block">
                     +216 99 295 274
                   </a>
                 </div>
               </li>
-              <li className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-base">🕐</span>
+              <li className="flex items-center gap-3 text-sm text-gray-300">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-base">🕐</span>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-medium">Horaires</p>
-                  <p className="text-xs font-medium text-[var(--text-primary)]">Lun - Ven, 9h - 18h</p>
+                  <p className="text-[11px] uppercase tracking-wider text-gray-400 font-medium">Horaires</p>
+                  <p className="text-xs font-medium text-white">Lun - Ven, 9h - 18h</p>
                 </div>
               </li>
             </ul>
 
             {/* Social Icons */}
-            <div className="mt-5 pt-4 border-t border-[var(--border-color)]">
-              <p className="text-[11px] uppercase tracking-wider text-[var(--text-muted)] font-medium mb-3">Suivez-nous</p>
+            <div className="mt-5 pt-4 border-t border-white/10">
+              <p className="text-[11px] uppercase tracking-wider text-gray-400 font-medium mb-3">Suivez-nous</p>
               <div className="flex gap-3">
                 <a
                   href="https://facebook.com/monbacfrancais"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--primary-blue)] text-white hover:bg-[var(--blue-dark)] transition"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-[var(--primary-blue)] transition animate-none"
                   aria-label="Facebook"
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -158,10 +158,10 @@ export function SiteFooter() {
 
         </div>
 
-        {/* Bottom Bar (Mentions & Copyright) */}
-        <div className="mt-16 border-t border-[var(--border-color)] pt-8">
+        {/* Bottom Bar */}
+        <div className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-xs text-[var(--text-muted)] text-center sm:text-left">
+            <p className="text-xs text-gray-400 text-center sm:text-left">
               © {new Date().getFullYear()} Mon Bac Français. Tous droits réservés.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
@@ -173,7 +173,7 @@ export function SiteFooter() {
                 <Link 
                   key={link.href}
                   href={link.href} 
-                  className="text-xs text-[var(--text-muted)] transition hover:text-[var(--primary-blue)] hover:underline"
+                  className="text-xs text-gray-400 transition hover:text-white hover:underline"
                 >
                   {link.label}
                 </Link>

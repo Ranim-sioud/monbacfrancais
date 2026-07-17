@@ -135,7 +135,7 @@ export function HeroSwiper() {
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation
-          className="h-[34rem] w-full sm:h-[40rem] lg:h-[46rem]"
+          className="h-[36rem] w-full sm:h-[44rem] lg:h-[46rem]"
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.alt}>
@@ -151,28 +151,28 @@ export function HeroSwiper() {
           ))}
         </Swiper>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full w-full items-center pb-12 px-4 sm:px-6 lg:px-10 xl:px-12">
-          <div className="pointer-events-auto max-w-2xl space-y-5 rounded-lg border border-[var(--border-color)] bg-[var(--white)]/95 p-5 shadow-lg backdrop-blur sm:p-6 lg:p-7">
-            <span className="inline-flex rounded-md border border-[var(--border-color)] bg-[var(--gray-50)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--primary-blue)]">
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full w-full items-center pt-12 pb-16 md:pt-16 md:pb-52 lg:pt-16 lg:pb-56 xl:pt-36 xl:pb-48 px-4 sm:px-6 lg:px-10 xl:px-12">
+          <div className="pointer-events-auto max-w-2xl space-y-3 sm:space-y-4 rounded-2xl border border-[var(--border-color)] bg-[var(--white)]/90 px-5 py-5 sm:px-8 sm:py-6 shadow-xl backdrop-blur-md">
+            <span className="inline-flex rounded-full border border-[var(--border-color)] bg-[var(--blue-pale)] px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[var(--primary-blue)]">
               Bac Français Candidat Libre
             </span>
-            <h1 className="text-3xl font-semibold tracking-tight text-[var(--text-primary)] sm:text-4xl lg:text-5xl">
+            <h1 className="text-xl font-black tracking-tight text-[var(--text-primary)] sm:text-2xl lg:text-4xl leading-tight">
               Passer le Bac Français en candidat libre depuis l&apos;étranger
             </h1>
-            <p className="text-sm leading-7 text-[var(--text-secondary)] sm:text-base">
+            <p className="text-[11px] leading-relaxed text-[var(--text-secondary)] sm:text-xs md:text-sm">
               Préparation bac français en ligne, accompagnement personnalisé et conseils
               pratiques pour sécuriser votre inscription et réussir vos épreuves.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-2.5 sm:flex-row">
               <Link
                 href="/inscription"
-                className="rounded-md bg-[var(--primary-blue)] px-6 py-3 text-center text-sm font-semibold text-[var(--white)] shadow-sm transition hover:bg-[var(--blue-dark)]"
+                className="rounded-xl bg-[var(--primary-blue)] px-4 py-2.5 sm:px-5 sm:py-3 text-center text-xs font-bold uppercase tracking-wider text-[var(--white)] shadow-md hover:shadow-lg transition-all duration-200 hover:bg-[var(--blue-dark)] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Commencer l&apos;inscription
               </Link>
               <Link
                 href="/guide-bac-francais"
-                className="rounded-md border border-[var(--border-color)] bg-[var(--white)] px-6 py-3 text-center text-sm font-semibold text-[var(--primary-red)] transition hover:bg-[var(--red-light)]"
+                className="rounded-xl border border-[var(--border-color)] bg-[var(--white)] px-4 py-2.5 sm:px-5 sm:py-3 text-center text-xs font-bold uppercase tracking-wider text-[var(--primary-red)] shadow-sm hover:shadow-md transition-all duration-200 hover:bg-[var(--red-light)] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Voir le guide
               </Link>
@@ -180,22 +180,22 @@ export function HeroSwiper() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30">
-          <div className="pointer-events-auto border-t border-[var(--border-color)] bg-[var(--white)]/95 backdrop-blur">
-            <div className="w-full px-4 py-4 sm:px-8 sm:py-5 lg:px-12 xl:px-16">
-              <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-4">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 hidden md:block">
+          <div className="pointer-events-auto bg-gradient-to-t from-[var(--white)] via-[var(--white)]/90 to-transparent pt-16 pb-6">
+            <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               {serviceHighlights.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-md border border-[var(--border-color)] bg-[var(--white)] p-4 transition hover:border-[var(--primary-blue)] hover:bg-[var(--gray-50)]"
+                  className="rounded-2xl border border-[var(--border-color)] bg-[var(--white)]/90 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[var(--primary-blue)] hover:bg-[var(--white)] group"
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-[var(--border-color)] bg-[var(--gray-50)]">
+                  <div className="flex items-start gap-4">
+                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border-color)] bg-[var(--blue-pale)] text-[var(--primary-blue)] shadow-sm transition-transform duration-300 group-hover:scale-110">
                       <ServiceIcon type={item.icon} />
                     </span>
                     <div>
-                      <h2 className="text-sm font-semibold text-[var(--text-primary)] sm:text-base">{item.title}</h2>
-                      <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:text-sm sm:leading-6">
+                      <h3 className="text-sm font-bold text-[var(--text-primary)] sm:text-base">{item.title}</h3>
+                      <p className="mt-1.5 text-xs leading-relaxed text-[var(--text-secondary)]">
                         {item.description}
                       </p>
                     </div>
@@ -205,6 +205,30 @@ export function HeroSwiper() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Highlights for Mobile */}
+      <div className="bg-white border-t border-[var(--border-color)] py-8 px-4 md:hidden">
+        <div className="grid gap-4 grid-cols-1">
+          {serviceHighlights.map((item) => (
+            <article
+              key={item.title}
+              className="rounded-2xl border border-[var(--border-color)] bg-[var(--white)] p-5 shadow-sm transition-all duration-300 hover:shadow-md group"
+            >
+              <div className="flex items-start gap-4">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border-color)] bg-[var(--blue-pale)] text-[var(--primary-blue)] shadow-sm">
+                  <ServiceIcon type={item.icon} />
+                </span>
+                <div>
+                  <h3 className="text-sm font-bold text-[var(--text-primary)]">{item.title}</h3>
+                  <p className="mt-1.5 text-xs leading-relaxed text-[var(--text-secondary)]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
