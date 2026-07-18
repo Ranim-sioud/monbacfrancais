@@ -11,6 +11,7 @@ import inscriptionRoutes from './routes/inscription.routes';
 import contactRoutes from './routes/contact.routes';
 
 dotenv.config();
+console.log("DATABASE_URL =", process.env.DATABASE_URL);
 
 const app = express();
 const PORT = process.env.PORT || 4000;
