@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "build": "npx prisma generate && npx tsc",
-    "start": "npx prisma migrate deploy && npx prisma db seed && node dist/app.js",
+    "start": "echo ===== MIGRATION ===== && npx prisma migrate deploy && echo ===== SEED ===== && npx prisma db seed && echo ===== START ===== && node dist/app.js",
     "db:migrate": "npx prisma migrate deploy",
     "db:studio": "npx prisma studio",
     "db:seed": "ts-node-dev src/config/seed.ts"
