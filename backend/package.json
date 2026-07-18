@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "build": "tsc",
-    "start": "node dist/app.js",
-    "db:migrate": "npx prisma migrate dev",
+    "start": "npx prisma migrate deploy && node dist/app.js",
+    "db:migrate": "npx prisma migrate deploy",
     "db:studio": "npx prisma studio",
     "db:seed": "ts-node-dev src/config/seed.ts"
   },
