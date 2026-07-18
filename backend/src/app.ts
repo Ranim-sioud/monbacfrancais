@@ -9,6 +9,7 @@ import actualiteRoutes from './routes/actualite.routes';
 import scraperRoutes from './routes/scraper.routes';
 import inscriptionRoutes from './routes/inscription.routes';
 import contactRoutes from './routes/contact.routes';
+import { bootstrap } from './bootstrap';
 
 dotenv.config();
 
@@ -19,10 +20,10 @@ const PORT = process.env.PORT || 4000;
 app.use(cors({
   origin: process.env.NODE_ENV === 'development'
     ? [
-        'http://localhost:3000',
-        'http://localhost:3001',
-        'http://localhost:3002',
-      ]
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'http://localhost:3002',
+    ]
     : process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true,
 }));
@@ -52,8 +53,14 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-  console.log(`Backend Mon Bac Français démarré sur http://localhost:${PORT}`);
-});
+async function startServer() {
+  await bootstrap();
+
+  app.listen(PORT, () => {
+    console.log(`Backend Mon Bac Français démarré sur http://localhost:${PORT}`);
+  });
+}
+
+startServer();
 
 export default app;
