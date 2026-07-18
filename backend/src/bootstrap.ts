@@ -19,7 +19,17 @@ export async function bootstrap() {
     });
 
     console.log("===== BOOTSTRAP OK =====");
-  } catch (err) {
-    console.error("Erreur pendant bootstrap :", err);
+  } catch (err: any) {
+  console.error("===== PRISMA ERROR =====");
+
+  if (err.stdout) {
+    console.error(err.stdout.toString());
   }
+
+  if (err.stderr) {
+    console.error(err.stderr.toString());
+  }
+
+  console.error(err);
+}
 }
