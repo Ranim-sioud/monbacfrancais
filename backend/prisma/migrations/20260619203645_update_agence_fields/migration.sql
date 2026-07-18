@@ -1,4 +1,4 @@
 -- AlterTable
-ALTER TABLE `agence` ADD COLUMN `facebook` VARCHAR(191) NULL,
+ALTER TABLE `Agence` ADD COLUMN `facebook` VARCHAR(191) NULL,
     ADD COLUMN `logoUrl` VARCHAR(191) NULL,
     ADD COLUMN `type` VARCHAR(191) NULL;

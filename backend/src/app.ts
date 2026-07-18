@@ -9,7 +9,6 @@ import actualiteRoutes from './routes/actualite.routes';
 import scraperRoutes from './routes/scraper.routes';
 import inscriptionRoutes from './routes/inscription.routes';
 import contactRoutes from './routes/contact.routes';
-import { bootstrap } from './bootstrap';
 
 dotenv.config();
 
@@ -53,14 +52,8 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-async function startServer() {
-  await bootstrap();
-
-  app.listen(PORT, () => {
-    console.log(`Backend Mon Bac Français démarré sur http://localhost:${PORT}`);
-  });
-}
-
-startServer();
+app.listen(PORT, () => {
+  console.log(`Backend Mon Bac Français démarré sur http://localhost:${PORT}`);
+});
 
 export default app;
