@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "npx prisma migrate deploy && node dist/app.js",
     "db:migrate": "npx prisma migrate deploy",
     "db:studio": "npx prisma studio",
