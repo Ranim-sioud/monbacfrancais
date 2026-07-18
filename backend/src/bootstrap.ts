@@ -1,35 +1,31 @@
-import { execSync } from 'child_process';
+import { execSync } from "child_process";
 
 export async function bootstrap() {
-  if (process.env.NODE_ENV !== 'production') {
-    return;
-  }
+  if (process.env.NODE_ENV !== "production") return;
 
   try {
     console.log("===== MIGRATION =====");
 
-    execSync("npx prisma migrate deploy", {
-      stdio: "inherit",
+    const output = execSync("npx prisma migrate deploy 2>&1", {
+      encoding: "utf8",
     });
+
+    console.log(output);
 
     console.log("===== SEED =====");
 
-    execSync("npx prisma db seed", {
-      stdio: "inherit",
+    const seed = execSync("npx prisma db seed 2>&1", {
+      encoding: "utf8",
     });
 
+    console.log(seed);
+
     console.log("===== BOOTSTRAP OK =====");
-  } catch (err: any) {
-  console.error("===== PRISMA ERROR =====");
+  } catch (e: any) {
+    console.error("===== PRISMA OUTPUT =====");
 
-  if (err.stdout) {
-    console.error(err.stdout.toString());
+    console.error(e.stdout);
+    console.error(e.stderr);
+    console.error(e.message);
   }
-
-  if (err.stderr) {
-    console.error(err.stderr.toString());
-  }
-
-  console.error(err);
-}
 }
