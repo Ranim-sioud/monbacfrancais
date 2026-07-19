@@ -135,7 +135,7 @@ export function HeroSwiper() {
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation
-          className="h-[36rem] w-full sm:h-[44rem] lg:h-[46rem]"
+          className="h-[36rem] w-full sm:h-[44rem] md:h-[52rem] lg:h-[52rem] xl:h-[43rem]"
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.alt}>
@@ -151,7 +151,7 @@ export function HeroSwiper() {
           ))}
         </Swiper>
 
-        <div className="pointer-events-none absolute inset-0 z-20 flex h-full w-full items-center pt-12 pb-16 md:pt-16 md:pb-52 lg:pt-16 lg:pb-56 xl:pt-36 xl:pb-48 px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="pointer-events-none absolute inset-0 z-20 flex h-full w-full items-start pt-[240px] sm:pt-[250px] md:pt-[270px] lg:pt-[240px] xl:pt-[14.5rem] pb-16 md:pb-52 lg:pb-56 xl:pb-4 px-4 sm:px-6 lg:px-10 xl:px-12">
           <div className="pointer-events-auto max-w-2xl space-y-3 sm:space-y-4 rounded-2xl border border-[var(--border-color)] bg-[var(--white)]/90 px-5 py-5 sm:px-8 sm:py-6 shadow-xl backdrop-blur-md">
             <span className="inline-flex rounded-full border border-[var(--border-color)] bg-[var(--blue-pale)] px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[var(--primary-blue)]">
               Bac Français Candidat Libre
@@ -180,7 +180,7 @@ export function HeroSwiper() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 hidden md:block">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 md:translate-y-6 lg:translate-y-4 xl:translate-y-4 z-30 hidden md:block">
           <div className="pointer-events-auto bg-gradient-to-t from-[var(--white)] via-[var(--white)]/90 to-transparent pt-16 pb-6">
             <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

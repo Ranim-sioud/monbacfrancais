@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export function TopBar() {
+export function TopBar({ isScrolled }: { isScrolled?: boolean } = {}) {
   return (
-    <div className="bg-[var(--white)] text-[var(--text-secondary)] relative z-10">
-      <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
+    <div className="bg-[var(--white)] text-[var(--text-secondary)] relative z-10 border-b border-[var(--border-color)]">
+      <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-300 ${isScrolled ? "py-1" : "py-2"}`}>
         <div className="flex flex-col items-center justify-between gap-2 sm:flex-row sm:gap-4">
           {/* Contact Info */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-medium">

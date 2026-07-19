@@ -7,21 +7,24 @@ import { usePathname } from "next/navigation";
 
 import { navigationItems } from "@/data/site-content";
 
-export function SiteHeader() {
+export function SiteHeader({ isScrolledOverride }: { isScrolledOverride?: boolean } = {}) {
   const pathname = usePathname();
   const [logoFailed, setLogoFailed] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolledLocal, setIsScrolledLocal] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const isScrolled = isScrolledOverride ?? isScrolledLocal;
+
   useEffect(() => {
+    if (isScrolledOverride !== undefined) return;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolledLocal(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isScrolledOverride]);
 
   // Fermer le dropdown en cliquant à l'extérieur
   useEffect(() => {
@@ -46,8 +49,8 @@ export function SiteHeader() {
   return (
     <header
       className={`w-full transition-all duration-300 left-0 right-0 ${isScrolled
-        ? "fixed top-0 z-50 bg-white border-b border-[var(--border-color)] shadow-md py-3.5"
-        : "relative bg-transparent py-5"
+        ? "bg-white border-b border-[var(--border-color)] py-0.5"
+        : "relative bg-transparent pt-2 pb-0"
         }`}
     >
       <div
@@ -58,14 +61,14 @@ export function SiteHeader() {
       >
         <div
           className={`transition-all duration-300 bg-white ${isScrolled
-            ? "rounded-none shadow-none border-none px-4 sm:px-6 lg:px-8 py-2"
-            : "rounded-2xl border border-[var(--border-color)] shadow-lg px-4 sm:px-6 lg:px-8 py-2.5 xl:py-3 xl:px-8 2xl:px-10"
+            ? "rounded-none shadow-none border-none px-4 sm:px-6 lg:px-8 py-0"
+            : "rounded-2xl border border-[var(--border-color)] shadow-lg px-4 sm:px-6 lg:px-8 pt-1 pb-1.5 xl:pt-1.5 xl:pb-2 xl:px-8 2xl:px-10"
             }`}
         >
           {/* Ligne décorative dégradée tricolore - visible uniquement sur la carte flottante */}
           {!isScrolled && (
             <div
-              className="h-[4px] w-full bg-gradient-to-r from-[var(--primary-blue)] via-[var(--primary-red)] to-[var(--primary-blue)] rounded-full -mt-2.5 mb-2.5 xl:-mt-3 xl:mb-3"
+              className="h-[4px] w-full bg-gradient-to-r from-[var(--primary-blue)] via-[var(--primary-red)] to-[var(--primary-blue)] rounded-full -mt-2.5 mb-1.5 xl:-mt-1.5 xl:mb-2"
               style={{
                 marginLeft: "calc(-1 * var(--padding-x, 1.5rem))",
                 width: "calc(100% + (2 * var(--padding-x, 1.5rem)))",
@@ -125,7 +128,7 @@ export function SiteHeader() {
                       href={item.href}
                       className={`rounded-lg px-2.5 py-2 text-xs xl:text-[12px] 2xl:text-[14px] font-bold transition-all duration-200 shrink-0 whitespace-nowrap ${isActive
                         ? "bg-[var(--primary-blue)] text-white shadow-sm"
-                        : "text-[var(--text-secondary)] hover:bg-[var(--blue-pale)] hover:text-[var(--primary-blue)]"
+                        : "text-[var(--text-secondary)] hover:bg-[var(--red-light)] hover:text-[var(--primary-red)]"
                         }`}
                     >
                       {item.label}
@@ -143,7 +146,7 @@ export function SiteHeader() {
                         href={item.href}
                         className={`rounded-lg px-2 py-1.5 text-xs xl:text-[11px] 2xl:text-[13px] font-bold transition-all duration-200 shrink-0 whitespace-nowrap ${isActive
                           ? "bg-[var(--primary-blue)] text-white shadow-sm"
-                          : "text-[var(--text-secondary)] hover:bg-[var(--blue-pale)] hover:text-[var(--primary-blue)]"
+                          : "text-[var(--text-secondary)] hover:bg-[var(--red-light)] hover:text-[var(--primary-red)]"
                           }`}
                       >
                         {item.label}
@@ -155,7 +158,7 @@ export function SiteHeader() {
                   <div className="relative" ref={dropdownRef}>
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className={`flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs xl:text-[11px] 2xl:text-[13px] font-bold transition-all duration-200 text-[var(--text-secondary)] hover:bg-[var(--blue-pale)] hover:text-[var(--primary-blue)] ${dropdownOpen ? "bg-[var(--blue-pale)] text-[var(--primary-blue)]" : ""
+                      className={`flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs xl:text-[11px] 2xl:text-[13px] font-bold transition-all duration-200 text-[var(--text-secondary)] hover:bg-[var(--red-light)] hover:text-[var(--primary-red)] ${dropdownOpen ? "bg-[var(--red-light)] text-[var(--primary-red)]" : ""
                         }`}
                     >
                       <span>Plus</span>
@@ -187,7 +190,7 @@ export function SiteHeader() {
                               onClick={() => setDropdownOpen(false)}
                               className={`block px-4 py-2.5 text-xs xl:text-xs 2xl:text-sm font-bold transition-all duration-150 ${isActive
                                 ? "bg-[var(--primary-blue)] text-white"
-                                : "text-[var(--text-secondary)] hover:bg-[var(--blue-pale)] hover:text-[var(--primary-blue)]"
+                                : "text-[var(--text-secondary)] hover:bg-[var(--red-light)] hover:text-[var(--primary-red)]"
                                 }`}
                             >
                               {item.label}
@@ -221,7 +224,7 @@ export function SiteHeader() {
                   href={item.href}
                   className={`shrink-0 rounded-lg px-3.5 py-2 text-[12px] font-bold transition-all duration-200 whitespace-nowrap ${isActive
                     ? "bg-[var(--primary-blue)] text-white"
-                    : "border border-[var(--border-color)] bg-white text-[var(--text-secondary)] hover:bg-[var(--blue-pale)] hover:text-[var(--primary-blue)]"
+                    : "border border-[var(--border-color)] bg-white text-[var(--text-secondary)] hover:bg-[var(--red-light)] hover:text-[var(--primary-red)]"
                     }`}
                 >
                   {item.label}

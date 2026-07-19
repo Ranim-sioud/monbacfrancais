@@ -70,8 +70,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${inter.variable} ${manrope.variable} bg-[var(--bg-primary)] text-[var(--text-primary)]`}>
+    <html lang="fr" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${manrope.variable} bg-[var(--bg-primary)] text-[var(--text-primary)]`}
+        suppressHydrationWarning
+      >
         <PublicShell>{children}</PublicShell>
       </body>
     </html>
