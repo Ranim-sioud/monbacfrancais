@@ -6,23 +6,6 @@ import Link from "next/link";
 type PackType = "MENSUEL" | "ANNUEL";
 type Classe = "PREMIERE" | "TERMINALE";
 
-const PACKS = [
-  {
-    type: "MENSUEL" as PackType,
-    name: "Pack Mensuel",
-    price: 190,
-    description: "Accès mensuel à tous les cours et ressources",
-    features: ["Accès complet aux cours", "Support par email", "Exercices corrigés"],
-  },
-  {
-    type: "ANNUEL" as PackType,
-    name: "Pack Annuel",
-    price: 1850,
-    description: "Accès annuel avec économie de 20%",
-    features: ["Tout le pack mensuel", "Sessions de coaching", "Examens blancs", "Priorité sur le support"],
-  },
-];
-
 export default function InscriptionPage() {
   const [formData, setFormData] = useState({
     nom: "",
@@ -37,6 +20,26 @@ export default function InscriptionPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  const currentPacks = [
+    {
+      type: "MENSUEL" as PackType,
+      name: "Pack Mensuel",
+      price: formData.classe === "PREMIERE" ? 185 : 195,
+      description: "Accès mensuel à tous les cours et ressources",
+      features: ["Accès complet aux cours", "Support par email", "Exercices corrigés"],
+      hasPromo: false,
+    },
+    {
+      type: "ANNUEL" as PackType,
+      name: "Pack Annuel",
+      price: formData.classe === "PREMIERE" ? 1850 : 1950,
+      originalPrice: formData.classe === "PREMIERE" ? 2220 : 2340,
+      description: "Accès annuel avec économie de 20%",
+      features: ["Tout le pack mensuel", "Sessions de coaching", "Examens blancs", "Priorité sur le support"],
+      hasPromo: true,
+    },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,8 +82,8 @@ export default function InscriptionPage() {
     }
   };
 
-  const selectedPack = PACKS.find((pack) => pack.type === formData.packType);
-  const finalPrice = selectedPack ? selectedPack.price * 0.8 : 0;
+  const selectedPack = currentPacks.find((pack) => pack.type === formData.packType);
+  const finalPrice = selectedPack ? selectedPack.price : 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[var(--bg-primary)] to-[var(--gray-50)]">
@@ -256,6 +259,29 @@ export default function InscriptionPage() {
                       <option value="PREMIERE">Première</option>
                       <option value="TERMINALE">Terminale</option>
                     </select>
+                    <div className="mt-3 grid grid-cols-2 gap-3 rounded-xl border border-[var(--border-color)] bg-[var(--blue-pale)]/30 p-3">
+                      <div className="flex flex-col justify-center border-r border-[var(--border-color)] pr-2">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-secondary)]">
+                          Pack Mensuel
+                        </span>
+                        <span className="mt-0.5 text-sm font-black text-[var(--primary-blue)]">
+                          {formData.classe === "PREMIERE" ? "185" : "195"}€<span className="text-[10px] font-medium text-[var(--text-secondary)]"> / mois</span>
+                        </span>
+                      </div>
+                      <div className="flex flex-col justify-center pl-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-secondary)]">
+                            Pack Annuel
+                          </span>
+                          <span className="rounded-full bg-green-100 px-1.5 py-0.5 text-[9px] font-bold text-green-700">
+                            -20%
+                          </span>
+                        </div>
+                        <span className="mt-0.5 text-sm font-black text-[var(--primary-blue)]">
+                          {formData.classe === "PREMIERE" ? "1850" : "1950"}€<span className="text-[10px] font-medium text-[var(--text-secondary)]"> / an</span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
 
                   <div>
@@ -305,7 +331,7 @@ export default function InscriptionPage() {
                 Choisissez votre pack
               </h2>
               <div className="grid gap-6 md:grid-cols-2">
-                {PACKS.map((pack) => (
+                {currentPacks.map((pack) => (
                   <div
                     key={pack.type}
                     className={`relative cursor-pointer rounded-xl border-2 p-6 transition-all ${
@@ -348,13 +374,22 @@ export default function InscriptionPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 flex-wrap">
                       <span className="text-3xl font-bold text-[var(--primary-blue)]">
                         {pack.price}€
                       </span>
-                      {formData.packType === pack.type && (
-                        <span className="rounded-full bg-green-100 px-2 py-1 text-sm font-semibold text-green-700">
-                          -20% = {Math.round(pack.price * 0.8)}€
+                      {pack.hasPromo ? (
+                        <>
+                          <span className="text-sm text-[var(--text-secondary)] line-through">
+                            {pack.originalPrice}€
+                          </span>
+                          <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
+                            Promo -20%
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-sm text-[var(--text-secondary)] font-normal">
+                          / mois
                         </span>
                       )}
                     </div>
@@ -377,24 +412,7 @@ export default function InscriptionPage() {
                 ))}
               </div>
 
-              <div className="rounded-xl border-2 border-[var(--primary-blue)]  p-6 shadow-lg">
-                <div className="mb-2 text-sm font-medium opacity-90">
-                  Prix final après réduction
-                </div>
-                <div className="flex items-baseline justify-between gap-2">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold">
-                      {Math.round(finalPrice)}€
-                    </span>
-                    <span className="text-sm opacity-75">
-                      (au lieu de {selectedPack?.price}€)
-                    </span>
-                  </div>
-                  <span className="text-sm opacity-90">
-                    Économie de 20%
-                  </span>
-                </div>
-              </div>
+
 
               <button
                 type="submit"
