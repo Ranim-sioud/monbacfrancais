@@ -35,7 +35,7 @@ export function TopBar({ isScrolled }: { isScrolled?: boolean } = {}) {
               </svg>
             </a>
             <a
-              href="https://instagram.com/monbacfrancais"
+              href="https://www.instagram.com/mon_bac_francais"
               target="_blank"
               rel="noreferrer"
               className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--gray-100)] text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition"

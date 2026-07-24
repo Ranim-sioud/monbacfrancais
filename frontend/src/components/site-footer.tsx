@@ -142,7 +142,7 @@ export function SiteFooter() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/monbacfrancais"
+                  href="https://www.instagram.com/mon_bac_francais"
                   target="_blank"
                   rel="noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white hover:opacity-90 transition"
